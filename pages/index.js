@@ -25,16 +25,14 @@ export default function Home(props) {
 
   const { handleTrackLocation, locationErrorMsg, isFindingLocation } = useTrackLocation();
   
-  // const [coffeeStores, setCoffeeStores] = useState("");
   const [coffeeStoresError, setCoffeeStoresError] = useState(null);
 
   const { dispatch, state } = useContext(StoreContext);
 
   const { coffeeStores, latLong } = state;
-  console.log({ latLong, locationErrorMsg });
 
   useEffect(() => {
-    async function setCoffeeStoresByLocation() {
+    const setCoffeeStoresByLocation = async () => {
       if (latLong) {
         try {
           const response = await fetch(
@@ -49,20 +47,18 @@ export default function Home(props) {
               coffeeStores,
             },
           });
-  
+          setCoffeeStoresError("");
           //set coffee stores
         } catch (error) {
           //set error
-          console.log({ error });
           setCoffeeStoresError(error.message);
         }
       }
-    }
+    };
     setCoffeeStoresByLocation();
-  }, [latLong]);
+  }, [latLong, dispatch]);
 
   const handleOnBannerBtnClick = () => {
-    console.log("hi banner button");
     handleTrackLocation();
   };
 
