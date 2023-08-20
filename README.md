@@ -1,38 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coffee Connoisseur
+FrontEnd Application for discovering coffee shops!
 
 ## Getting Started
+For this app to work, you need to configure the following environment variables in your .env.local file so please create a .env.local file in the root of your project right next to readme.md and the file needs to look like this:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+NEXT_PUBLIC_FOURSQUARE_API_KEY=<value>
+AIRTABLE_API_KEY=<value>
+AIRTABLE_BASE_KEY=<value>
+NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=<value>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Running the Project
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1. In the terminal, run: `npm run dev`
+2. Browse to the coffee store frontend at [localhost:3000](http://localhost:3000) and find coffee shops near you!
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Packages Used
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+* airtable - Airtable JavaScript library
+* classnames - A simple JavaScript utility for conditionally joining classNames together
+* swr - React Hooks library for data fetching
+* unsplash - https://unsplash.it/ JavaScript generator
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Concepts
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* Routing with Next.js
+* Styling in Next.js
+* Hydration, SEO, and Different Rendering Techniques
+* Statics and Dynamic Pages
+* Coffee Stores by Location
+* Serverless Functions
+* Data Storage using Airtable
+* SWR with Client Side Rendering
+* Deployment and Build Optimization
